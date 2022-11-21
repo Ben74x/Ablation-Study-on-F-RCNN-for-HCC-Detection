@@ -67,7 +67,6 @@ class BackboneWithFPN(nn.Module):
 def get_mobilenet_backbone(backbone_name: MobileNetBackbones) -> torch.nn.Sequential:
     """
     Returns a mobilenet backbone pretrained on ImageNet.
-    Removes the average-pooling layer and the linear layer at the end.
     """
     pretrained_model, out_channels = None, None
 
