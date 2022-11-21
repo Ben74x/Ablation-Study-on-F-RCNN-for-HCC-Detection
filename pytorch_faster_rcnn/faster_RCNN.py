@@ -8,17 +8,26 @@ from torchvision.models.detection.faster_rcnn import FasterRCNN
 from torchvision.models.detection.rpn import AnchorGenerator
 from torchvision.ops import MultiScaleRoIAlign
 
-from pytorch_faster_rcnn_tutorial.backbone_resnet import (
+from pytorch_faster_rcnn.backbone_resnet import (
     BackboneWithFPN,
     ResNetBackbones,
     get_resnet_backbone,
     get_resnet_fpn_backbone,
 )
-from pytorch_faster_rcnn_tutorial.metrics.enumerators import MethodAveragePrecision
-from pytorch_faster_rcnn_tutorial.metrics.pascal_voc_evaluator import (
+
+from pytorch_faster_rcnn.backbone_mobilenet import (
+    BackboneWithFPN,
+    MobileNetBackbones,
+    get_mobilenet_backbone,
+    get_mobilenet_fpn_backbone,
+)
+
+
+from pytorch_faster_rcnn.metrics.enumerators import MethodAveragePrecision
+from pytorch_faster_rcnn.metrics.pascal_voc_evaluator import (
     get_pascalvoc_metrics,
 )
-from pytorch_faster_rcnn_tutorial.utils import from_dict_to_boundingbox
+from pytorch_faster_rcnn.utils import from_dict_to_boundingbox
 
 
 def get_anchor_generator(
@@ -146,6 +155,72 @@ def get_faster_rcnn_resnet(
         max_size=max_size,
         **kwargs,
     )
+
+
+
+def get_faster_rcnn_mobilenet(
+    num_classes: int,
+    backbone_name: MobileNetBackbones,
+    anchor_size: Tuple[Tuple[int, ...], ...],
+    aspect_ratios: Tuple[Tuple[float, ...]],
+    fpn: bool = True,
+    min_size: int = 512,
+    max_size: int = 1024,
+    **kwargs,
+) -> FasterRCNN:
+    """
+    Returns the Faster-RCNN model with resnet backbone with and without fpn.
+    anchor_size can be for example: ((16,), (32,), (64,), (128,))
+    aspect_ratios can be for example: ((0.5, 1.0, 2.0),)
+
+    Please note that you specify the aspect ratios for all layers, because we perform:
+    aspect_ratios = aspect_ratios * len(anchor_size)
+
+    If you wish more control, change this line accordingly.
+    """
+
+    # Backbone
+    if fpn:
+        backbone: BackboneWithFPN = get_mobilenet_fpn_backbone(backbone_name=backbone_name)
+    else:
+        backbone: torch.nn.Sequential = get_mobilenet_backbone(backbone_name=backbone_name)
+
+    # Anchors
+    anchor_size = anchor_size
+    aspect_ratios = aspect_ratios * len(anchor_size)
+    anchor_generator = get_anchor_generator(
+        anchor_size=anchor_size, aspect_ratios=aspect_ratios
+    )
+
+    # ROI Pool
+    # performing a forward pass to get the number of featuremap names
+    # this is required for the get_roi_pool function
+    # TODO: there is probably a better way to get the featuremap names (without a forward pass)
+    with torch.no_grad():
+        backbone.eval()
+        random_input = torch.rand(size=(1, 3, 512, 512))
+        features = backbone(random_input)
+
+    if isinstance(features, torch.Tensor):
+        features = OrderedDict([("0", features)])
+
+    featmap_names = [key for key in features.keys() if key.isnumeric()]
+
+    roi_pool = get_roi_pool(featmap_names=featmap_names)
+
+    # Model
+    return get_faster_rcnn(
+        backbone=backbone,
+        anchor_generator=anchor_generator,
+        roi_pooler=roi_pool,
+        num_classes=num_classes,
+        min_size=min_size,
+        max_size=max_size,
+        **kwargs,
+    )
+
+
+
 
 
 class FasterRCNNLightning(pl.LightningModule):
