@@ -3,5 +3,7 @@ The codebase for my graduate thesis can be found in this repository. The common 
 
 This project's main objective is to evaluate the performance (speed and accuracy) of Faster RCNN model on the liver cancer detection with various backbones and parameters.
 
+---
+
 
 ## Dataset
