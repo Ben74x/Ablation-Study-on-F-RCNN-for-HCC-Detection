@@ -17,6 +17,7 @@ This project's main objective is to evaluate the performance (speed and accuracy
 - `source faster-rcnn-proj/bin/activate`
 
 
+
 Install the libraries:
    `pip install -r requirements.txt`
 
@@ -24,6 +25,8 @@ Install the libraries:
 on the [PyTorch website](https://pytorch.org/). To check whether pytorch uses the nvidia gpu, check
 if `torch.cuda.is_available()` returns `True` in your python shell.
    
+
+---
 
 ## Dataset
 
