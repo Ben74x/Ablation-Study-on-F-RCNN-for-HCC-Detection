@@ -28,7 +28,21 @@ if `torch.cuda.is_available()` returns `True` in your python shell.
 
 ---
 
+
+## Dependencies
+
+These are the libraries that are used in this project:
+
+- High-level deep learning library for PyTorch: [PyTorch Lightning](https://www.pytorchlightning.ai/)
+- Visualization software: Custom code with the image-viewer [Napari](https://napari.org/)
+- [OPTIONAL] Experiment tracking software/logging module: [Neptune](https://neptune.ai/)
+
+If you want to use [Neptune](https://neptune.ai/) for your own experiments, add the `NEPTUNE` environment variable to
+your system. Before you do that, create an account and an api key. Otherwise, deactivate it in the scripts. 
+
 ## Dataset
 
+The [dataset](/Users/johannes/workspace/PyTorch-Object-Detection-Faster-RCNN-Tutorial/pytorch_faster_rcnn_tutorial/data)
+consists of 20 selfie-images randomly selected from the internet.
 
 ---
