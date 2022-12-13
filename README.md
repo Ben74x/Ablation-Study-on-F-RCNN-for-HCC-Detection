@@ -8,9 +8,9 @@ This project's main objective is to evaluate the performance (speed and accuracy
 ## Installation
 
 [conda](https://docs.conda.io/en/latest/miniconda.html):
-        - `conda create --name faster-rcnn-tutorial -y`
-        - `conda activate faster-rcnn-tutorial`
-        - `conda install python=3.8 -y`
+- `conda create --name faster-rcnn-tutorial -y`
+- `conda activate faster-rcnn-tutorial`
+- `conda install python=3.8 -y`
         
 [venv](https://docs.python.org/3/library/venv.html):
 - `python3 -m venv faster-rcnn-tutorial`
