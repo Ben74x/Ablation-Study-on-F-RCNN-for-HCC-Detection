@@ -19,6 +19,10 @@ This project's main objective is to evaluate the performance (speed and accuracy
 
 Install the libraries:
    `pip install -r requirements.txt`
+
+**Note**: CPU-version of torch will be installed. If you want to use a GPU or TPU, please refer to the instructions
+on the [PyTorch website](https://pytorch.org/). To check whether pytorch uses the nvidia gpu, check
+if `torch.cuda.is_available()` returns `True` in your python shell.
    
 
 ## Dataset
