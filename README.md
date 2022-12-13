@@ -43,6 +43,6 @@ your system. Before you do that, create an account and an api key on `NEPTUNE`. 
 ## Dataset
 
 The [dataset](/Users/johannes/workspace/PyTorch-Object-Detection-Faster-RCNN-Tutorial/pytorch_faster_rcnn_tutorial/data)
-consists of 1200 hand labelled images from [The Cancer Imaging Archive] (https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=61080617#61080617bcab02c187174a288dbcbf95d26179e8).
+consists of 1200 hand labelled images from [The Cancer Imaging Archive](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=61080617#61080617bcab02c187174a288dbcbf95d26179e8).
 
 ---
