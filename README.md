@@ -38,11 +38,11 @@ These are the libraries that are used in this project:
 - [OPTIONAL] Experiment tracking software/logging module: [Neptune](https://neptune.ai/)
 
 If you want to use [Neptune](https://neptune.ai/) for your own experiments, add the `NEPTUNE` environment variable to
-your system. Before you do that, create an account and an api key. Otherwise, deactivate it in the scripts. 
+your system. Before you do that, create an account and an api key on `NEPTUNE`. Otherwise, deactivate it in the scripts. 
 
 ## Dataset
 
 The [dataset](/Users/johannes/workspace/PyTorch-Object-Detection-Faster-RCNN-Tutorial/pytorch_faster_rcnn_tutorial/data)
-consists of 20 selfie-images randomly selected from the internet.
+consists of 1200 hand labelled images from [The Cancer Imaging Archive] (https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=61080617#61080617bcab02c187174a288dbcbf95d26179e8).
 
 ---
