@@ -46,3 +46,6 @@ The [dataset](/Users/johannes/workspace/PyTorch-Object-Detection-Faster-RCNN-Tut
 consists of 1200 hand labelled images from [The Cancer Imaging Archive](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=61080617#61080617bcab02c187174a288dbcbf95d26179e8). The labelling was done using [Napari](https://napari.org/) and details can be found in the annotation script. My labelled data can be found here.
 
 ---
+
+
+NVIDIA GeForce RTX 2080
