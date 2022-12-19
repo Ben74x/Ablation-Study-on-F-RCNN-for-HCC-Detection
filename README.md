@@ -48,6 +48,12 @@ The dataset consists of 1200 hand labelled images from [The Cancer Imaging Archi
 
 
 ## Training
+To train the model run the [training.ipynb](https://github.com/Ben74x/Ablation-Study-on-F-RCNN-for-HCC-Detection/blob/main/training.ipynb) notebook. It's crucial to consider anchor sizes and aspect ratios when training a Faster-RCNN model. Considering that these boxes are compared to those produced by the network, picking appropriate sizes and ratios can be crucial for a project's success. The AnchorGenerator's PyTorch implementation typically expects the following structure:
+- anchor size: `Tuple[Tuple[int, ...], ...]`
+- aspect ratio: `Tuple[Tuple[float, ...]]`
 
+*Without the FPN*, the ResNet backbone always produces a single feature map that is utilised to build anchor boxes. As a result, we must construct a Tuple that only contains a single Tuple, such as `((32, 64, 128, 256, 512),)` or `(((32, 64),)`
+
+*With FPN*, we can map our anchor sizes using 4 feature maps (results from a ResNet + FPN). This forces us to construct a Tuple that has exactly 4 Tuples, such as ((32,), (64,), (128,), (256), or ((8, 16, 32), (32, 64), (32, 64, 128, 256, 512), (200, 300)).
 
 NVIDIA GeForce RTX 2080
