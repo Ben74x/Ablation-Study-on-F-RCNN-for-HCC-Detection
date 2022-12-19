@@ -1,3 +1,5 @@
+# Reference: https://github.com/johschmidt42/PyTorch-Object-Detection-Faster-RCNN-Tutorial/blob/master/pytorch_faster_rcnn_tutorial/metrics/pascal_voc_evaluator_example.py
+
 # Imports
 import pathlib
 from itertools import chain
@@ -14,7 +16,7 @@ from pytorch_faster_rcnn_tutorial.utils import (
 # root directory
 FOLDER_PATH = pathlib.Path(__file__).parent.absolute()
 MODULE_PATH = FOLDER_PATH.parent.absolute()
-DATA_PATH = MODULE_PATH / "data" / "heads"
+DATA_PATH = MODULE_PATH / "tests" / "images"
 
 
 def main():

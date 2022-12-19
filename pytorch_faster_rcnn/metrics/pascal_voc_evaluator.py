@@ -1,3 +1,6 @@
+# Reference: https://github.com/johschmidt42/PyTorch-Object-Detection-Faster-RCNN-Tutorial/blob/master/pytorch_faster_rcnn_tutorial/metrics/pascal_voc_evaluator.py
+
+# imports
 import os
 import sys
 from collections import Counter
@@ -6,8 +9,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from pytorch_faster_rcnn_tutorial.metrics.bounding_box import BoundingBox
-from pytorch_faster_rcnn_tutorial.metrics.enumerators import MethodAveragePrecision
+from pytorch_faster_rcnn.metrics.bounding_box import BoundingBox
+from pytorch_faster_rcnn.metrics.enumerators import MethodAveragePrecision
 
 
 def calculate_ap_every_point(rec, prec):

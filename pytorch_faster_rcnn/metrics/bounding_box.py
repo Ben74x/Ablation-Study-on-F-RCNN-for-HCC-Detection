@@ -1,3 +1,5 @@
+# Reference: https://github.com/johschmidt42/PyTorch-Object-Detection-Faster-RCNN-Tutorial/blob/master/pytorch_faster_rcnn_tutorial/metrics/bounding_box.py
+
 from typing import Optional
 
 from pytorch_faster_rcnn.metrics.enumerators import (
