@@ -1,3 +1,5 @@
+# Reference: https://github.com/johschmidt42/PyTorch-Object-Detection-Faster-RCNN-Tutorial/blob/master/pytorch_faster_rcnn_tutorial/backbone_resnet.py
+
 from enum import Enum
 from typing import Dict, List, Optional
 

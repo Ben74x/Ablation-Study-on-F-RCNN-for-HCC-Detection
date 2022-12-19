@@ -1,3 +1,7 @@
+
+# Reference: https://github.com/johschmidt42/PyTorch-Object-Detection-Faster-RCNN-Tutorial/blob/master/pytorch_faster_rcnn_tutorial/anchor_generator.py
+
+# imports
 from typing import Tuple
 
 import torch

@@ -1,3 +1,6 @@
+# Reference: https://github.com/johschmidt42/PyTorch-Object-Detection-Faster-RCNN-Tutorial/blob/master/pytorch_faster_rcnn_tutorial/faster_RCNN.py
+
+# imports
 from collections import OrderedDict
 from itertools import chain
 from typing import List, Optional, Tuple

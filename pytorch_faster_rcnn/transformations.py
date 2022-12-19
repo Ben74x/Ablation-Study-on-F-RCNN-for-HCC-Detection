@@ -1,3 +1,5 @@
+# Reference: https://github.com/johschmidt42/PyTorch-Object-Detection-Faster-RCNN-Tutorial/blob/master/pytorch_faster_rcnn_tutorial/transformations.py
+
 from functools import partial
 from typing import Callable, List
 

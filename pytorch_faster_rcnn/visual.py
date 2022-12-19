@@ -1,3 +1,7 @@
+
+# Reference: https://github.com/johschmidt42/PyTorch-Object-Detection-Faster-RCNN-Tutorial/blob/master/pytorch_faster_rcnn_tutorial/visual.py
+
+# imports
 import pathlib
 from dataclasses import dataclass
 from typing import Dict, Optional, Tuple

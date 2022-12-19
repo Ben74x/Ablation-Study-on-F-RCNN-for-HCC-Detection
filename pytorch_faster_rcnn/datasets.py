@@ -1,3 +1,6 @@
+# Reference: https://github.com/johschmidt42/PyTorch-Object-Detection-Faster-RCNN-Tutorial/blob/master/pytorch_faster_rcnn_tutorial/datasets.py
+
+# imports
 import pathlib
 from multiprocessing import Pool
 from typing import Dict, List
