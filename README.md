@@ -75,3 +75,6 @@ A lot of expirements were computed and these are the top results.
 
 
 ---
+
+## Weights
+The weights can be found [here](https://drive.google.com/drive/folders/1Xkwz_MUL-f0oPA-h29OZ46XGB71MrIrG?usp=sharing)
