@@ -42,9 +42,12 @@ your system. Before you do that, create an account and an api key on `NEPTUNE`. 
 
 ## Dataset
 
-The dataset consists of 1200 hand labelled images from [The Cancer Imaging Archive](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=61080617#61080617bcab02c187174a288dbcbf95d26179e8). The labelling was done using [Napari](https://napari.org/) and details can be found in the annotation script. My labelled data can be found [here](https://drive.google.com/drive/folders/1d7WuqRQSmFah4tBh8Eo2eG-6v3nVvC8K?usp=sharing).
+The dataset consists of 1200 hand labelled images from [The Cancer Imaging Archive](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=61080617#61080617bcab02c187174a288dbcbf95d26179e8). The labelling was done using [Napari](https://napari.org/) and details can be found in the annotation script. My labelled data can be found [here](https://drive.google.com/drive/folders/1d7WuqRQSmFah4tBh8Eo2eG-6v3nVvC8K?usp=sharing). The one on github is limited.
 
 ---
+
+
+## Training
 
 
 NVIDIA GeForce RTX 2080
