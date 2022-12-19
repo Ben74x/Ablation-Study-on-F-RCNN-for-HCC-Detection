@@ -54,6 +54,24 @@ To train the model run the [training.ipynb](https://github.com/Ben74x/Ablation-S
 
 *Without the FPN*, the ResNet backbone always produces a single feature map that is utilised to build anchor boxes. As a result, we must construct a Tuple that only contains a single Tuple, such as `((32, 64, 128, 256, 512),)` or `(((32, 64),)`
 
-*With FPN*, we can map our anchor sizes using 4 feature maps (results from a ResNet + FPN). This forces us to construct a Tuple that has exactly 4 Tuples, such as ((32,), (64,), (128,), (256), or ((8, 16, 32), (32, 64), (32, 64, 128, 256, 512), (200, 300)).
+*With FPN*, we can map our anchor sizes using 4 feature maps (results from a ResNet + FPN). This forces us to construct a Tuple that has exactly 4 Tuples, such as ((32,), (64,), (128,), (256), or ((8, 16, 32), (32, 64), (32, 64, 128, 256, 512), (200, 300)). The training was done on NVIDIA GeForce RTX 2080.
 
-NVIDIA GeForce RTX 2080
+
+---
+
+
+## Results
+A lot of expirements were computed and these are the top results. 
+
+| Backbone	| With FPN| mAP|
+|:-:	|:-:	|:-:	|	
+| **ResNet-101** 	| False|0.52|
+| **ResNet-18** 	| True|0.486|
+| **ResNet-34** 	| False|0.483|
+| **ResNet-34** 	| True|0.475|
+| **ResNet-152** 	| True|0.455|
+| **ResNet-50** 	| True|0.446|
+|**ResNet-101**|True|0.439|
+
+
+---
