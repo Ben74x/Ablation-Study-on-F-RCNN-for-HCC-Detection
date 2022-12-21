@@ -1,6 +1,6 @@
 # Ablation Study On Faster RCNN For HCC Detection
 
-CT             |  CT - Lesion
+U-image             |  U-image - Lesion
 :-------------------------:|:-------------------------:
 ![images/Picture1](images/Picture1.jpg)  |  ![images/Picture2](images/Picture2.jpg)
 
