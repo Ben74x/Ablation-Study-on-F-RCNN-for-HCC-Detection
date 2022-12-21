@@ -1,6 +1,6 @@
 # Ablation Study On Faster RCNN For HCC Detection
 
-                           |  
+           -               |            - 
 :-------------------------:|:-------------------------:
 ![images/Picture1](images/Picture1.jpg)  |  ![images/Picture2](images/Picture2.jpg)
 
